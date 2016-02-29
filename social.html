@@ -1,25 +1,15 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Customized Dashboard</title>
+<header>
+  <title>Social Media</title>
   <link rel="stylesheet" type="text/css" href="style.css">
-</head>
+</header>
+<body>
 <body>
 <ul class="nav">
   <li><a href="index.html">Home</a></li>
   <li><a href="social.html">Social Media</a></li>
   <li><a href="pages.html">Web pages</a></li>
 </ul>
-
-<script>
-FB.api(
-    "/{page-id}/feed",
-    function (response) {
-      if (response && !response.error) {
-        /* handle the result */
-      }
-    }
-);
-</script>
 </body>
 </html>
