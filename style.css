@@ -15,7 +15,16 @@
   padding: 14px 16px;
   text-decoration: none;
 }
+.content1 {
+  left: 0%;
+  top: 0%;
+}
+.content2 {
 
-body{
-  border-image: ;
+}
+.sidebar {
+  float: left;
+  background-color: #999;
+  padding: 5px;
+  width: 180px;
 }
