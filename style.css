@@ -16,15 +16,21 @@
   text-decoration: none;
 }
 .content1 {
-  left: 0%;
-  top: 0%;
+  border: 1px solid black;
+  position: absolute;
+  left: 20%;
+  top: 50%;
+  height: 500px;
+  width: 900px;
 }
 .content2 {
 
 }
 .sidebar {
   float: left;
+  position: absolute;
   background-color: #999;
   padding: 5px;
+  height: 100%;
   width: 180px;
 }
