@@ -1,0 +1,7 @@
+{
+    "consumerKey": "UDMYUEmUDdqGp5t4CGMmn3Xgp",
+    "consumerSecret": "Zq8HomaHiEqKwlsp3F7LO5ckVKIHPl1tI4yum2QKBLZVb5LK26",
+    "accessToken": "475344734-JZt8QA7FJjCoh7Yiy6CyrIy1ltjKXRE3fDIFo0C9",
+    "accessTokenSecret": "QBKeNqFtWy5kZjTL32XlQBNjRrcf2Cl4M2Ljlltale28c",
+    "callBackUrl": "https://api.twitter.com/1.1/statuses/mentions_timeline.json"
+}

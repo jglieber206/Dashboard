@@ -14,7 +14,18 @@
 <div class="sidebar">
 
 </div>
-<iframe class="content1" src="http://forecast.weather.gov/MapClick.php?lon=-105.77808460998547&lat=39.80038511136971#.VtYl45MrJE4"></iframe>
+<!-- <iframe class="content1" src="http://forecast.weather.gov/MapClick.php?lon=-105.77808460998547&amp;lat=39.80038511136971#.VtYl45MrJE4"></iframe> -->
+<!-- source: responsivegridsystem.com -->
+<div class="section group">
+  <div class="col span_1_of_2">
+  This is column 1
+  </div>
+  <div class="col span_1_of_2">
+  This is column 2
+  </div>
+</div>
+
+
 <script>
   // This is called with the results from from FB.getLoginStatus().
   function statusChangeCallback(response) {
@@ -94,6 +105,18 @@
         'Thanks for logging in, ' + response.name + '!';
     });
   }
+
+twitter stuff{
+ var url= 'https://api.twitter.com/1.1/statuses/mentions_timeline.json?count=50';
+ $.getJSON(url, function(data)){
+
+ }
+
+}
+
+// function load_home(){
+            // document.getElementById("content1").innerHTML=;
+//}
 </script>
 <!-- <fb:login-button scope="public_profile,email" onlogin="checkLoginState();"> -->
 <!-- </fb:login-button> -->
