@@ -13,6 +13,7 @@
 
 /*  COLUMN SETUP  */
 .col {
+  border-radius: 0.5em;
   border: 1px solid #000;
   display: block;
   float:left;
@@ -54,15 +55,14 @@
   left: 20%;
 }
 
-#draggable {
+#draggable, #draggable1, #draggable2 {
+  background-color: #999;
   display: inline;
-  border: 1px solid black;
-  /*width: 150px;*/
-  /*height: 150px;*/
-  padding: 0.5em;
+  /*border: 1px solid black;*/
+  padding-top: 1.0em;
 }
 
-#fill {
+.fill {
   height: 100%;
   width: 100%;
 }
