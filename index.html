@@ -3,6 +3,15 @@
 <head>
   <title>Customized Dashboard</title>
   <link rel="stylesheet" type="text/css" href="style1.css">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <!-- <link rel="stylesheet" href="/resources/demos/style.css"> -->
+  <script>
+    $(function() {
+      $( "#draggable" ).draggable();
+    });
+  </script>
 </head>
 <body>
 <ul class="nav">
@@ -17,43 +26,24 @@
   </ul>
 </div>
 <div id="content1" class="col">Content1</div>
-<div id="content2" class="col">
-  <iframe class="fill" src="http://www.google.com"></iframe>
-</div>
+<div id="content2" class="col">Content2</div>
+<div id="draggable" class="ui-widget-content"><p>Test draggable div</p></div>
+  <!-- <iframe class="fill" src="http://www.google.com"></iframe> -->
 <div id="weather" class="col">
-  <iframe class="fill" src="http://forecast.weather.gov/MapClick.php?lat=39.6759&amp;lon=-104.9652#.VtZr4ZMrJE4"></iframe>
+  <iframe id="weather-content" class="fill" onload="getForecast()"src="http://forecast.weather.gov/MapClick.php?lat=39.6759&amp;lon=-104.9652#.VtZr4ZMrJE4" style="display: none;"></iframe>
 </div>
 
 <script>
-// window.fbAsyncInit = function() {
-//     FB.init({
-//       appId      : 'your-app-id',
-//       xfbml      : true,
-//       version    : 'v2.5'
-//     });
-//   };
-//   (function(d, s, id){
-//      var js, fjs = d.getElementsByTagName(s)[0];
-//      if (d.getElementById(id)) {return;}
-//      js = d.createElement(s); js.id = id;
-//      js.src = "//connect.facebook.net/en_US/sdk.js";
-//      fjs.parentNode.insertBefore(js, fjs);
-//    }(document, 'script', 'facebook-jssdk'));
-// (function(d, s, id) {
-//   var js, fjs = d.getElementsByTagName(s)[0];
-//   if (d.getElementById("fb-login-button")) return;
-//   js = d.createElement(s); js.id = id;
-//   js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
-//   fjs.parentNode.insertBefore(js, fjs);
-// }(document, 'script', 'facebook-jssdk'));
+function getForecast() {
+//   var divElement = document.getElementById('weather').contentWindow.document.getElementById('detailed-forecast');
+// document.getElementById('weather-content').appendChild(divElement);
+var data = document.getElementById('weather').innerHTML;
+//This will get the content from the div above with the id of "dataDiv"
 
-
-
+document.getElementById("getData").setAttribute("src","page2.html?var="+data);
+}
 
 
 </script>
-<!-- <fb:login-button scope="public_profile,email" onlogin="checkLoginState();"> -->
-<!-- </fb:login-button> -->
-<!-- <div id="status"></div> -->
 </body>
 </html>

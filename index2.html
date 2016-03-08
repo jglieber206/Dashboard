@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="jquery-ui/jquery-ui.css">
+  <script src="jquery-ui/external/jquery/jquery.js"></script>
+  <script src="jquery-ui/jquery-ui.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+  <div class="navbar-fixed ">
+    <nav>
+      <div class="nav-wrapper indigo lighten-1">
+        <div class="z-depth-1">
+          <ul class="nav">
+            <li class="active"><a href="home.html" >Home</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <div class="section">
+    <div id="draggable" class="col span_1_of_2">
+      <iframe id="fill" src="http://forecast.weather.gov/MapClick.php?lat=39.6759&amp;lon=-104.9652#.VtZr4ZMrJE4"></iframe>
+    </div>
+  </div>
+  <div class="section">
+    <div id="draggable1" class="col span_1_of_2">
+      <iframe  src="http://www.google.com"></iframe>
+    </div>
+  </div>
+
+<script>
+  $( "#draggable" ).draggable({ grid: [ 40, 20 ] });
+  $( "#draggable1" ).draggable({ grid: [ 40, 20 ] });
+</script>
+
+
+</body>
+</html>
