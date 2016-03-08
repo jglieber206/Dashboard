@@ -61,7 +61,8 @@
   /*height: 150px;*/
   padding: 0.5em;
 }
-.fill {
+
+#fill {
   height: 100%;
   width: 100%;
 }
