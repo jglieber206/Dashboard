@@ -1,0 +1,6 @@
+json
+want:   
+
+[“text”]
+[“screen_name”]
+[“profile_image_url”]

@@ -1,4 +1,5 @@
 //call node index.js in terminal for results
+
 var Twitter = require('twitter-node-client').Twitter;
   //Callback functions
     var error = function (err, response, body) {
@@ -25,9 +26,31 @@ var Twitter = require('twitter-node-client').Twitter;
     }
 
     var twitter = new Twitter(config);
-    console.log(twitter.getMentionsTimeline({ count: '10'}, error, success));
+    var runJSON = twitter.getMentionsTimeline({ count: '10'}, error, success);
+    console.log(runJSON);
+
+//     success:function(Data)
+// {
+    // var tweetMention = [];
+    // for (var i= 0; i< "data".length; i++){
+    //     tweetMention = "data"[i].text;
+    //     console.log("data"[0]["text"]);
+    // }
+
+    
+    // console.log(runJSON['text']);
 
     // console.log(data);
     // for (var i = 0; i < "data".length; i++) {
     //     // console.log('Data [%s]', data);
     // }
+
+    // for (var key in Data) {
+    //    if (data.hasOwnProperty(key)) {
+    //       console.log(data[key].text);
+    //       console.log(data[key].screen_name);
+    //       console.log(data[key].profile_image_url)
+    //    }
+    // }
+// }
+
