@@ -11,6 +11,11 @@
   display: inline;
 }
 
+ #calendar{
+  height:50vh;
+  overflow: hidden;
+}
+
 /*  COLUMN SETUP  */
 .col {
   border-radius: 0.5em;
