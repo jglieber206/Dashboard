@@ -1,0 +1,356 @@
+<head>
+  <style>
+  /*source: http://codepen.io/katydecorah/pen/aDAoG */
+
+  @import url(http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css);
+  @import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700);
+  * {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  html {
+    width: 100%;
+    height: 100%;
+  }
+
+  body {
+    width: 100%;
+    height: 100%;
+    display: box;
+    box-align: center;
+    box-pack: center;
+    transform: translate3d(0, 0, 0);
+    overflow: hidden;
+  }
+
+  .clearfix, .container, .calendar {
+    zoom: 1;
+  }
+  .clearfix:before, .container:before, .calendar:before, .clearfix:after, .container:after, .calendar:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+  }
+  .clearfix:after, .container:after, .calendar:after {
+    clear: both;
+  }
+
+  body {
+    background: #249991;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 100;
+    line-height: 1;
+    font-size: 20px;
+    color: #222;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .container {
+    margin: 0 auto;
+    width: 30em;
+  }
+
+  .today {
+    background: #4ecdc4;
+    color: white;
+    padding: 1em 0;
+    float: right;
+    width: 15em;
+    min-height: 17em;
+  }
+  .today .day-week {
+    color: rgba(255, 255, 255, 0.8);
+    margin: 1em 0 2em;
+  }
+  .today .day-num {
+    font-size: 8em;
+  }
+
+  .calendar {
+    float: left;
+    width: 15em;
+    min-height: 17em;
+    background: #f5f5f5;
+    padding: 1.25em 1em 2em;
+  }
+  .calendar .month {
+    color: #249991;
+    font-weight: 700;
+    margin: 0.75em 0 1em;
+  }
+  .calendar .weekday {
+    color: #e42355;
+    font-weight: 700;
+    font-size: 0.8em;
+  }
+  .calendar .day {
+    font-size: 0.8em;
+    font-weight: 700;
+    color: #555555;
+  }
+  .calendar .weekday, .calendar .day {
+    float: left;
+    width: 12%;
+    margin: 0.25em 1%;
+    line-height: 1.5em;
+    vertical-align: middle;
+  }
+  .calendar .weekday.now, .calendar .day.now {
+    position: relative;
+    color: #e42355;
+  }
+  .calendar .weekday.now:before, .calendar .day.now:before {
+    content: "";
+    width: 1.75em;
+    height: 1.75em;
+    border: 0.2em solid #e42355;
+    position: absolute;
+    border-radius: 100%;
+    left: -0.35em;
+    top: -0.3em;
+  }
+
+  .mute {
+    color: rgba(0, 0, 0, 0.25);
+  }
+
+@media (max-width: 38em) {
+  .container {
+    max-width: 95%;
+    padding:5%;
+  }
+
+  .today, .calendar {
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+  </style>
+</head>
+
+
+
+<body onload="changeDate()">
+  <div class='container' >
+    <div class='today'>
+      <div class='date'></div>
+      <div class='day-week' ></div>
+      <div class='day-num'></div>
+    </div>
+    <div class='calendar'>
+      <div class='month'>
+
+      </div>
+      <ul class='weekdays'>
+        <li class='weekday'>
+          S
+        </li>
+        <li class='weekday'>
+          M
+        </li>
+        <li class='weekday'>
+          T
+        </li>
+        <li class='weekday'>
+          W
+        </li>
+        <li class='weekday'>
+          T
+        </li>
+        <li class='weekday'>
+          F
+        </li>
+        <li class='weekday'>
+          S
+        </li>
+      </ul>
+      <ul class='week'>
+        <li class='day'>
+        </li>
+        <li class='day'>
+        </li>
+        <li class='day'>
+
+          1
+
+        </li>
+        <li class='day'>
+
+          2
+
+        </li>
+        <li class='day'>
+
+          3
+
+        </li>
+        <li class='day'>
+
+          4
+        </li>
+        <li class='day'>
+
+          5
+        </li>
+        <li class='day'>
+
+          6
+        </li>
+        <li class='day'>
+
+          7
+        </li>
+        <li class='day'>
+
+          8
+        </li>
+        <li class='day'>
+
+          9
+        </li>
+        <li class='day'>
+          10
+        </li>
+        <li class='day'>
+          11
+        </li>
+        <li class='day'>
+          12
+        </li>
+        <li class='day'>
+          13
+        </li>
+        <li class='day'>
+          14
+        </li>
+        <li class='day'>
+          15
+        </li>
+        <li class='day'>
+          16
+        </li>
+        <li class='day'>
+          17
+        </li>
+        <li class='day'>
+          18
+        </li>
+        <li class='day'>
+          19
+        </li>
+        <li class='day'>
+          20
+        </li>
+        <li class='day'>
+          21
+        </li>
+        <li class='day'>
+          22
+        </li>
+        <li class='day'>
+          23
+        </li>
+        <li class='day'>
+          24
+        </li>
+        <li class='day'>
+          25
+        </li>
+        <li class='day'>
+          26
+        </li>
+        <li class='day'>
+          27
+        </li>
+        <li class='day'>
+          28
+        </li>
+        <li class='day'>
+          29
+        </li>
+        <li class='day'>
+          30
+        </li>
+        <li class='day'>
+          31
+        </li>
+      </ul>
+    </div>
+  </div>
+</body>
+
+<script>
+// w3schools
+function changeDate(){
+  var d = new Date();
+  var monthDay = d.getDate();
+  document.getElementsByClassName("day-num")[0].innerHTML = monthDay;
+
+  var weekday = new Array(7);
+  weekday[0]=  "Sunday";
+  weekday[1] = "Monday";
+  weekday[2] = "Tuesday";
+  weekday[3] = "Wednesday";
+  weekday[4] = "Thursday";
+  weekday[5] = "Friday";
+  weekday[6] = "Saturday";
+  var n = weekday[d.getDay()];
+
+  document.getElementsByClassName("day-week")[0].innerHTML = n;
+
+  var month = new Array(11);
+  month[0] = "January";
+  month[1] = "February";
+  month[2] = "March";
+  month[3] = "April";
+  month[4] = "May";
+  month[5] = "June";
+  month[6] = "July";
+  month[7] = "August";
+  month[8] = "September";
+  month[9] = "October";
+  month[10] = "November";
+  month[11] = "December";
+  var monthName = month[d.getMonth()];
+
+  document.getElementsByClassName("month")[0].innerHTML = monthName+" 2016";
+
+  var dayDiv = document.getElementsByClassName("day"); 
+  
+ 
+
+  for(var i=0; i<dayDiv.length; i++){
+  
+
+   if (dayDiv[i].innerHTML == monthDay){
+
+     dayDiv[i].className = "day now";
+     break;
+  }
+    // var mute = document.createElement('span');
+    var mute = document.createTextNode("<span class='mute'>");
+    // var endMute = document.createElement('span');
+    var endMute = document.createTextNode("</span>");
+    // endMute.innerHTML=
+
+    var currCont = dayDiv[i].innerHTML;
+
+
+      dayDiv[i].innerHTML = mute.nodeValue+currCont+endMute.nodeValue;
+      console.log(dayDiv[i].innerHTML);
+   
+}
+
+//http://stackoverflow.com/questions/9716468/is-there-any-function-like-isnumeric-in-javascript-to-validate-numbers
+
+
+
+}
+
+
+</script>
+</html>
+

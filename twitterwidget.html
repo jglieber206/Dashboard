@@ -1,0 +1,23 @@
+<!-- DON'T ALTER THIS WITHOUT LOOKING AT TWITTER DEV DOCS -->
+ 
+<div id="timeline"></div>
+ 
+<script sync src="https://platform.twitter.com/widgets.js"></script>
+ 
+<script>
+ 
+  window.onload = (function(){
+ 
+    twttr.widgets.createTimeline(
+      '707087519574204422', 
+     document.getElementById('timeline'),
+       {
+        chrome: 'nofooter transparent noheader', //no footer, transparent so you can change borders/bg color/etc
+         related: 'twitterdev,twitterapi'
+       }).then(function (el) {
+         console.log("Embedded a timeline.")
+       });
+ 
+  });
+ 
+</script>

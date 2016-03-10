@@ -1,31 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="jquery-ui/jquery-ui.css">
-  <script src="jquery-ui/external/jquery/jquery.js"></script>
-  <script src="jquery-ui/jquery-ui.js"></script>
+  <title>Dashboard</title>
+  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
-  <link rel='stylesheet' href='bower_components/fullcalendar/dist/fullcalendar.css' />
-  <script src="bower_components/jquery/dist/jquery.min.js"></script>
-  <script src="bower_components/moment/min/moment.min.js"></script>
-  <script src="bower_components/fullcalendar/dist/fullcalendar.js"></script>
   <link rel="stylesheet" type="text/css" href="style.css">
-
-  <script>
-  $(document).ready(function() {
-
-    // page is now ready, initialize the calendar...
-
-    $('#calendar').fullCalendar({
-        // put your options and callbacks here
-    })
-
-});
-
-   $( "#draggable" ).draggable({ grid: [ 40, 20 ] });
-  $( "#draggable1" ).draggable({ grid: [ 40, 20 ] });
-  </script>
-
 
 </head>
 <body>
@@ -41,44 +20,44 @@
       </div>
     </nav>
   </div>
+
   <!-- twitter feed -->
-<!--   <div class="section span_2_of_2">
-    <p id="getForecast"></p>
-    <script>
-      $( "#result" ).load( "http://forecast.weather.gov/MapClick.php?lat=39.6759&amp;lon=-104.9652#.VtZr4ZMrJE4 #getForecast" );
-    </script>
-  </div> -->
   <div class="section group">
-    <div id="twitter draggable" class="col span_1_of_2 z-depth-2">
-      <a class="fill twitter-timeline" href="https://twitter.com/realDonaldTrump" data-widget-id="707087519574204422" height="50vh" width="350">Tweets by @realDonaldTrump</a>
-      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-    </div>
+    <div id="twitterdraggable" class="col span_1_of_2 z-depth-2" >
+      <div id="twitter"> <p><a href="https://twitter.com/realDonaldTrump">@realDonaldTrump</a></p>
+    <iframe class="filltwitter" src="twitterwidget.html"></iframe>
+  </div>
+
+    </div> <!-- end twitter draggable -->
+
+
     <div id="draggable1" class="col span_1_of_2 z-depth-2">
       <iframe class="fill" src="http://forecast.weather.gov/MapClick.php?lat=39.6759&amp;lon=-104.9652#.VtZr4ZMrJE4"></iframe>
 
+    </div> <!-- end draggable 1 -->
+ 
+   <!--  calendar -->
+     <div id="draggable2" class="col span_1_of_2 z-depth-2">
+      <iframe class="fill" src="newcal.html"></iframe>
     </div>
-  </div>
 
-  <div class="section">
-
-    <div id="draggable2" class="col span_1_of_2 z-depth-2">
-      <iframe class="fill"  src="http://www.google.com"></iframe>
+     <div id="draggable3" class="col span_1_of_2 z-depth-2">
+      <iframe class="fill" src="newcal.html"></iframe>
     </div>
-  </div>
-
-  <script>
-  $( "#draggable" ).draggable({ grid: [ 40, 20 ] });
-  $( "#draggable1" ).draggable({ grid: [ 40, 20 ] });
-  $( "#draggable2" ).draggable({ grid: [ 40, 20 ] });
-  </script>
-
-    <div id="draggable1" class="col span_1_of_2">
-      <div id='calendar'></div>
-    </div>
-  </div>
 
 
+</div><!--  end section group -->
 
+
+<link rel="stylesheet" href="jquery-ui/jquery-ui.css">
+  <script src="jquery-ui/external/jquery/jquery.js"></script>
+  <script src="jquery-ui/jquery-ui.js"></script>
+<script>
+$( "#twitterdraggable" ).draggable({ grid: [ 40, 20 ] });
+$( "#draggable1" ).draggable({ grid: [ 40, 20 ] });
+$( "#draggable2" ).draggable({ grid: [ 40, 20 ] });
+$( "#draggable3" ).draggable({ grid: [ 40, 20 ] });
+</script>
 
 </body>
 </html>
