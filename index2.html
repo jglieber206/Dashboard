@@ -2,19 +2,27 @@
 <html>
 <head>
   <title>Dashboard</title>
-  
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
   <link rel="stylesheet" type="text/css" href="style.css">
 
 </head>
 <body>
 
-  <div class="navbar-fixed ">
+  <div class="navbar-fixed">
     <nav>
       <div class="nav-wrapper indigo lighten-1">
         <div class="z-depth-1">
           <ul class="nav">
             <li class="active"><a href="home.html" >Home</a></li>
+            <li class="right hide-on-med-and-down">
+              <form method="get" target="_blank" action="https://www.google.com/search">
+                <div class="input-field">
+                  <input id="search" type="search" name="q" class="indigo lighten-2" placeholder="Google search" required>
+                  <label for="search"><i class="material-icons indigo lighten-1"></i></label>
+                </div>
+              </form>
+            </li>
           </ul>
         </div>
       </div>
@@ -23,40 +31,34 @@
 
   <!-- twitter feed -->
   <div class="section group">
-    <div id="twitterdraggable" class="col span_1_of_2 z-depth-2" >
+    <div id="twitterdraggable" class="col span_1_of_2 z-depth-2">
       <div id="twitter"> <p><a href="https://twitter.com/realDonaldTrump">@realDonaldTrump</a></p>
-    <iframe class="filltwitter" src="twitterwidget.html"></iframe>
-  </div>
-
+        <iframe class="filltwitter" src="twitterwidget.html"></iframe>
+      </div>
     </div> <!-- end twitter draggable -->
-
 
     <div id="draggable1" class="col span_1_of_2 z-depth-2">
       <iframe class="fill" src="http://forecast.weather.gov/MapClick.php?lat=39.6759&amp;lon=-104.9652#.VtZr4ZMrJE4"></iframe>
 
     </div> <!-- end draggable 1 -->
- 
-   <!--  calendar -->
-     <div id="draggable2" class="col span_1_of_2 z-depth-2">
+
+     <!--  calendar -->
+    <div id="draggable2" class="col span_1_of_2 z-depth-2">
       <iframe class="fill" src="newcal.html"></iframe>
     </div>
-
-     <div id="draggable3" class="col span_1_of_2 z-depth-2">
+    <div id="draggable3" class="col span_1_of_2 z-depth-2">
       <iframe class="fill" src="newcal.html"></iframe>
     </div>
-
-
-</div><!--  end section group -->
-
+  </div><!--  end section group -->
 
 <link rel="stylesheet" href="jquery-ui/jquery-ui.css">
   <script src="jquery-ui/external/jquery/jquery.js"></script>
   <script src="jquery-ui/jquery-ui.js"></script>
 <script>
-$( "#twitterdraggable" ).draggable({ grid: [ 40, 20 ] });
-$( "#draggable1" ).draggable({ grid: [ 40, 20 ] });
-$( "#draggable2" ).draggable({ grid: [ 40, 20 ] });
-$( "#draggable3" ).draggable({ grid: [ 40, 20 ] });
+  $( "#twitterdraggable" ).draggable({ grid: [ 40, 20 ] });
+  $( "#draggable1" ).draggable({ grid: [ 40, 20 ] });
+  $( "#draggable2" ).draggable({ grid: [ 40, 20 ] });
+  $( "#draggable3" ).draggable({ grid: [ 40, 20 ] });
 </script>
 
 </body>
