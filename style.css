@@ -1,3 +1,4 @@
+
 /*twitter fill class*/
 /*expands timeline to fit container */
 .filltwitter{
@@ -31,6 +32,7 @@
   background-color: #999; /*only shows as top "bar" on divs*/
   display: inline; /*let divs be side by side*/
   padding-top: 1.0em;
+  -webkit-animation: show 2s ease;-webkit-animation-iteration-count:1;
 }
 
 #twitterdraggable{
@@ -109,3 +111,11 @@ first box in new row*/
 @media only screen and (max-width: 480px) {
   .span_2_of_2, .span_1_of_2 { width: 100%; }
 }
+
+@-webkit-keyframes show {
+  0% {top: -300px;}
+  50% {top: 40px;}
+  100% {top: 0px;}
+}
+
+
